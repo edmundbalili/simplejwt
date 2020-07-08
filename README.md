@@ -8,6 +8,7 @@ A crude and basic REST implementaton that handles JWT (jsonwebtoken) using NuxtJ
     - bcryptjs for password hashing
     - and validatorjs for validating data
   - NuxtJS can serve our application as backend and frontend, rather having separate node instances
+  
   - Available endpoints are:
     - [POST] /register : accepts email and password as input
       - conditions:
