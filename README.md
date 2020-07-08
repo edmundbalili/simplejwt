@@ -21,7 +21,11 @@ A crude and basic REST implementaton that handles JWT (jsonwebtoken) using NuxtJ
     - [POST] /login : accepts email and password and returns token on successful login
     - [GET] /verify : accepts token to verify
     - [DELETE] /logout : accepts token and flags it as blacklisted token to avoid reuse
-
+    - [POST] /create : 
+      - accepts auth bearer token; 
+      - a mock endpoint that undergoes token checking before processing data
+      - this endpoint assumes data entry and is just a proof-of-concept
+      
 ### Installation
 Open on directory then command:
 ```sh
