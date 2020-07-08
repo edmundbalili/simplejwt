@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "0ae47e74-61fe-4e5e-b8ad-23d63df52fdf",
+		"name": "SimpleJWT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"edmund@test.com\",\r\n    \"password\": \"12aB123342!34\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"edmund@test.com\",\r\n    \"password\": \"12aB123342!34\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify token",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTaW1wbGVKV1QiLCJleHAiOjE1OTQyMTI3MjYsInN1YiI6IjVmMDViMjdjOTQ2M2JhNDE0YzA3NGNlNyIsImlhdCI6MTU5NDIwOTIxMH0.oEXCbhmReBNLmS0qHguKL1trumAreOa0IKwHVJ-5mmk\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/verify",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"verify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTaW1wbGVKV1QiLCJleHAiOjE1OTQyMTI3MjYsInN1YiI6IjVmMDViMjdjOTQ2M2JhNDE0YzA3NGNlNyIsImlhdCI6MTU5NDIwOTIxMH0.oEXCbhmReBNLmS0qHguKL1trumAreOa0IKwHVJ-5mmk\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"logout"
+					]
+				},
+				"description": "Invalidates token"
+			},
+			"response": []
+		},
+		{
+			"name": "DUMMY_ONLY-Create user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTaW1wbGVKV1QiLCJleHAiOjE1OTQyMTI3MjYsInN1YiI6IjVmMDViMjdjOTQ2M2JhNDE0YzA3NGNlNyIsImlhdCI6MTU5NDIwOTMxNX0.0aFBwSgtzh710e9Ra6kpPaQtLeuItKfEPZPpJX8WlPs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
